@@ -4,12 +4,12 @@ import './index.css';
 import Register from './Pages/Register';
 import Login from './Pages/Login'
 import reportWebVitals from './reportWebVitals';
-import App from './App'
+import AppRouter from './AppRouter'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppRouter />
     
   </React.StrictMode>
 );

@@ -1,16 +1,20 @@
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Register from './Pages/Register';
-import Login from './Pages/Login'
+import express from 'express';
+import users from './users.js'
+import usersPost from './usersPost.js'
 
 
-function App (){
+const app = express()
+const port = 3000
 
-    return <Router>
-        <Routes>
-            <Route path="/" element={<Register />}/>
-            <Route path="/login" element={<Login />}/>
-        </Routes>
-    </Router>
-}
+app.get('/users', (req, res) => {
+    res.send(users);
+});
 
-export default App;
+app.get('/users-post', (req, res) => {
+    res.send(usersPost);
+});
+
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+})
+
