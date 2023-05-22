@@ -10,12 +10,11 @@
     align-items:flex-start;
     background: #1E1F23;
     width: 250px;
-    height: 100vh;
+    height: 146vh;
     padding: 42px 10px 42px 8px;
     flex: none;
     order: 0;
     flex-grow: 1;
-    position: fixed;
     border-width: 2px 2px 2px 0px;
     border-style: solid;
     border-color: #2E2F36
@@ -88,7 +87,8 @@
 
 .button{
     border-radius: 5px;
-    border: 2px solid #2E2F36;
+    border-width: 2px;
+    border-color: #2E2F36;;
     font-family: 'Poppins';
     color: #FFFFFF;
     position: absolute;
@@ -133,24 +133,24 @@
 
   
 .post{
-display: flex;
-flex-direction: column;
-align-items:flex-start;
-padding: 24px 20px;
-gap: 24px;
-margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 24px 20px;
+    gap: 24px;
+    margin-left: auto;
 
-width: 230px;
-height: 272px;
+    width: 230px;
+    height: 272px;
 
-background: #1E1F23;
-border: 2px solid #2E2F36;
-border-radius: 16px;
+    background: #1E1F23;
+    border: 2px solid #2E2F36;
+    border-radius: 16px;
 
-flex: none;
-order: 0;
-flex-grow: 0;
-overflow: hidden;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    overflow: hidden;
 }
 
 .friends{
@@ -159,6 +159,76 @@ overflow: hidden;
 
 }
 .post2{
-    position: absolute;
-    top: 400px
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0px;
+    gap: 16px;
+
+    width: 716px;
+    height: 709px;
+    margin-top: -150px;
+
+    background: #1E1F23;
+
+
+    border: 2px solid #2E2F36;
+    border-radius: 16px;
+
+    flex: none;
+    order: 1;
+    align-self:flex-start;
+    flex-grow: 0;
 }
+
+.paragraph {
+    width: 678px;
+    height: 36px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 10px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    background-color:#1E1F23;
+}
+
+.ilha {
+    width: 710px;
+    height: 300px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.Post3 {
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    padding: 10px 24px;
+
+    width: 620px;
+    height: 37px;
+    margin-top: -180px;
+
+
+
+    background: #27282F;
+    border-radius: 46px;
+
+
+
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
