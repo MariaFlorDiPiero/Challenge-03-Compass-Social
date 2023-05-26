@@ -15,6 +15,7 @@ model User {
 
   username String @unique
   password String
-
   name String
+  email String @unique
+  birthdate String?
 }
