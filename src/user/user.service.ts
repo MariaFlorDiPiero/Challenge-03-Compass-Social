@@ -13,7 +13,7 @@ export class UserService {
     const user = await this.prisma.user.create({ data: createUserDto });
     return {
       statusCode: HttpStatus.CREATED,
-      message: 'User created successfully',
+      message: 'Usuário criado com sucesso',
       data: user,
     };
   }
@@ -30,7 +30,7 @@ export class UserService {
     const user = await this.prisma.user.findUnique({ where: { id } });
 
     if (!user) {
-      throw new NotFoundException(`User with ID ${id} not found`);
+      throw new NotFoundException(`Usuário com ID ${id} não encontrado`);
     }
 
     await this.prisma.user.delete({ where: { id } });
