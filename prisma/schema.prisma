@@ -27,4 +27,12 @@ model Post {
   url_image String?
 }
 
+model Comments {
+  id Int @id @default(autoincrement())
+
+  username String
+  post_id String
+  comment String
+}
+
 
