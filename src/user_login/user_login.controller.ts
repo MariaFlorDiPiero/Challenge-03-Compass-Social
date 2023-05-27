@@ -11,7 +11,7 @@ import { UserLoginService } from './user_login.service';
 import { CreateUserLoginDto } from './dto/create-user_login.dto';
 import { UpdateUserLoginDto } from './dto/update-user_login.dto';
 
-@Controller('/api/v1/users/login')
+@Controller()
 export class UserLoginController {
   constructor(private readonly userLoginService: UserLoginService) {}
 
