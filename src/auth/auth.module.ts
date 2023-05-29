@@ -22,8 +22,7 @@ import { UserLoginModule } from 'src/user_login/user_login.module';
   controllers: [AuthController],
   providers: [AuthService, LocalStrategy],
 })
-export class AuthModule implements NestModule {
-  configure(consumer: MiddlewareConsumer) {
-    // consumer.apply(LoginValidationMiddleware).forRoutes('login') // JwtStrategy;;
-  }
-}
+export class AuthModule {}
+// implements NestModule {
+//   configure(consumer: MiddlewareConsumer) {
+//     // consumer.apply(LoginValidationMiddleware).forRoutes('login') // JwtStrategy;;

@@ -4,27 +4,31 @@ import * as bcrypt from 'bcrypt';
 // import { UnauthorizedError } from './errors/unauthorized.error';
 import { User } from '../user/entities/user.entity';
 import { UserLoginService } from '../user_login/user_login.service';
+import { UserPayload } from './models/UserPayload';
+import { UserToken } from './models/UserToken';
 // import { UserPayload } from './models/UserPayload';
 // import { UserToken } from './models/UserToken';
 
 @Injectable()
 export class AuthService {
   constructor(
-    // private readonly jwtService: JwtService,
+    private readonly jwtService: JwtService,
     private readonly userLoginService: UserLoginService,
   ) {}
 
-  // async login(username: User): Promise<UserToken> {
-  //   const payload: UserPayload = {
-  //     sub: username.id,
-  //     email: username.email,
-  //     name: username.name,
-  //   };
+  login(user: User): UserToken {
+    const payload: UserPayload = {
+      sub: user.id,
+      email: user.email,
+      username: user.username,
+    };
 
-  //   return {
-  //     access_token: this.jwtService.sign(payload),
-  //   };
-  // }
+    const jwtToken = this.jwtService.sign(payload);
+
+    return {
+      access_token: jwtToken,
+    };
+  }
 
   async validateUser(username: string, password: string): Promise<User> {
     const user = await this.userLoginService.findByUsername(username);
