@@ -1,14 +1,24 @@
 import React from 'react';
+import Login from '../Login';
 
 
-function LoginList({ onLogin }) {
+
+function LoginList({ onLogin, username, password, setUsername, setPassword }) {
   return (
     <section className="login">
       <h2>Login</h2>
 
       <ul className="list">
         <li className="list-item">
-          <input type="email" id="name" name="name" placeholder="Usuário" className="input" />
+          <input 
+          type="email" 
+          id="name" 
+          name="name" 
+          placeholder="Usuário" 
+          className="input"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}  
+          />
           <svg
             className="fa fa-name"
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +36,15 @@ function LoginList({ onLogin }) {
         </li>
 
         <li className="list-item">
-          <input type="password" id="password" name="password" placeholder="Senha" className="input" />
+          <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Senha" 
+          className="input"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)} 
+          />
           <svg
             className="fa fa-password"
             xmlns="http://www.w3.org/2000/svg"
