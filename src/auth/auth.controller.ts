@@ -12,7 +12,7 @@ import { HttpCode, HttpStatus } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LocalAuthGuard } from './guards/local-auth.guard';
 
-@Controller('/api/v1/users')
+@Controller('/api/v2/users')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
@@ -20,6 +20,7 @@ export class AuthController {
   @HttpCode(HttpStatus.OK)
   @UseGuards(LocalAuthGuard)
   login() {
+    return 'realizar login';
     // return this.authService.login();
   }
 }
